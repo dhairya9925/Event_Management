@@ -1,0 +1,80 @@
+# Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Django files
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+*.bak
+*.swp
+
+# Media files (if you're storing media in your local project directory)
+media/
+
+# Static files (if you're storing static files in your local project directory)
+static/
+
+# Django migrations
+*/migrations/*
+!*/migrations/__init__.py
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+.ENV/
+venv.bak/
+env.bak/
+
+# IDE files
+.vscode/
+.idea/
+
+# MacOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+
+# Python environment files
+*.env
+*.env.*
+.env/
+
+# Coverage reports
+.coverage
+*.coveragerc
+
+# PyCharm specific
+.idea/
+
+# MyPy
+.mypy_cache/
+
+# Django Rest Framework specific
+# You might have specific data related to user uploads, you can ignore them.
+*.bak
+*.swp
+
+# Local development files
+*.log
+
+# Test and coverage reports
+nosetests.xml
+coverage.xml
+*.coveragerc
+
+# .env file to store your sensitive information (do not push to git)
+.env
+
+# Docker related
+Dockerfile
+docker-compose.yml
