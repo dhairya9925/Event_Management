@@ -22,23 +22,21 @@ A RESTful API built with Django and Django REST Framework for managing events, R
 ## Installation
 
 ### 1. Clone the Repository
-ash
-git clone https://github.com/dhairya9925/Event_Management
-cd Event_Management
+`git clone https://github.com/dhairya9925/Event_Management
+cd Event_Management`
+
 ### 2. Create and Activate Virtual Environment
 
 **On Linux/Mac:**
-keep .venv along side with root Event_Management folder
 `pip install uv 
 uv venv
 source .venv/bin/activate`
 
 
 #### install dependencies
-uv synv 
-
+`uv synv` at root level where "pyproject.toml" is located 
 or 
-pip install django djangorestframework djangorestframework-simplejwt django-cors-headers Pillow
+`pip install django djangorestframework djangorestframework-simplejwt django-cors-headers Pillow`
 
-
+### Note
 run testing_script.py to test not actual testcase but it gets you started
