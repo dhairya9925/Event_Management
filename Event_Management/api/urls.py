@@ -21,9 +21,10 @@ from . import views
 urlpatterns = [
     path('', views.home),
     path('event', views.handle_event),
-    path('event/<str:id>', views.handle_specified_event),
+    path('event/<str:event_id>', views.handle_specified_event),
+    path('event/<str:event_id>/invite', views.invite_users),
     path('event/<str:event_id>/rsvp', views.create_rsvp),
     path('event/<str:event_id>/rsvp/<str:user_id>', views.update_rsvp),
-    path('event/<str:id>/reviews', views.handle_reviews),
+    path('event/<str:event_id>/reviews', views.handle_reviews),
     # path('delete/<str:id>', views.delete_event),
 ]

@@ -5,6 +5,7 @@ class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
         fields = "__all__"
+        # exclude = ("invited",)
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:

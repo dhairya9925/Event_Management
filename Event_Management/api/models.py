@@ -7,6 +7,7 @@ class UserProfile(models.Model):
     bio = models.TextField(blank=True, null=True)
     location = models.CharField(max_length=150, blank=True, null=True)
     profile_picture = models.ImageField(upload_to="profile_pics/", blank=True, null=True)
+    # invites = models.ManyToManyField()
 
     def __str__(self):
         return self.full_name or self.user.username
@@ -20,6 +21,7 @@ class Event(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     is_public = models.BooleanField(default=True)
+    invited = models.ManyToManyField(User, related_name="invited_people", blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -30,8 +32,8 @@ class Event(models.Model):
 # RSVP -> "Please Respons"
 class RSVP(models.Model):
     STATUS_CHOICES = [
-        ('Going', 'Going'),
-        ('Maybe', 'Maybe'),
+        ('going', 'Going'),
+        ('maybe', 'Maybe'),
         ('Not Going', 'Not Going'),
     ]
 
@@ -63,4 +65,4 @@ class Review(models.Model):
         ordering = ["-created_at"]          # Latest reviews first
 
     def __str__(self):
-        return f"{self.event.title} - {self.rating}★ by {self.user.username}"
+        return f"{self.event.title} - {self.rating} by {self.user.username}"
